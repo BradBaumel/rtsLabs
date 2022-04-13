@@ -38,13 +38,13 @@ public class RTSLabs{
          return map;
      }
      
-     // returns a string rotated by the given value.
+     // returns a string rotated by the given value. Assuming rotAmount is positive int.
      public String stringRotation(String str, int rotAmount){
          String rotatedString = "";
          int length = str.length();
          
          if(rotAmount > length){
-             rotAmount = rotAmount - length;
+             rotAmount = rotAmount % length;
          }
         
         rotatedString += str.substring(length - rotAmount, length);
